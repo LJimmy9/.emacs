@@ -24,10 +24,29 @@
 ;; )
 ;; (add-hook 'prog-mode-hook (lambda () (enable-line-numbers "prog-mode-hook")))
 
-(require 'keybinds)
+(use-package magit
+  :ensure t)
 
+(require 'keybinds) ; lisp/keybinds.el 
+(find-file "~/.emacs.d/notes-keybind.txt")
 (split-window-right)
 
 (dired "~")
 
-(find-file "~/.emacs.d/notes-keybind.txt")
+(defun my/auto-set-mark-in-new-buffer ()
+  "Automatically set a mark when visiting a new buffer."
+  (unless (or (minibufferp) (mark)) ; Avoid setting mark in minibuffer or if already set
+    (push-mark nil t t)
+    (deactivate-mark)
+    ))
+
+(add-hook 'find-file-hook #'my/auto-set-mark-in-new-buffer)
+(add-hook 'window-configuration-change-hook #'my/auto-set-mark-in-new-buffer)
+
+
+
+
+
+
+
+
