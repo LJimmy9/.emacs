@@ -1,0 +1,6 @@
+ALT-B Switch to buffer in current window
+ALT-SHIFT-B Switch to buffer in other window
+
+CTRL-X o Switch window
+
+CTRL-backspace Delete word backwards

@@ -2,34 +2,32 @@
 (setq visible-bell t)
 (setq default-directory "~")
 
-(ido-mode 1)
+(setq initial-frame-alist '((fullscreen . maximized)))
+(setq backup-directory-alist
+      `(("." . "~/.emacs.d/backups")))
+(setq auto-save-file-name-transforms
+      `((".*" "~/.emacs.d/auto-save-list/" t)))
+
+(setq custom-file "~/.emacs.d/custom.el")
+
+(ido-mode)
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
-(require 'keybinds)
-;; (global-set-key (kbd "M-x") 'smex)              
-;; (global-set-key (kbd "M-X") 'smex-major-node-commands)
-;; (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-
 (load-theme 'leuven-dark t)
-
 (set-frame-font "FiraMono Nerd Font-16" nil t)
+(display-line-numbers-mode)
+
 ;; (set-frame-font "Monospace-18")
-(defun enable-line-numbers (hook-name)
-  (message "Enabling line numbers for %s" hook-name)
-  (display-line-numbers-mode 1)
-)
+;; (defun enable-line-numbers (hook-name)
+;;   (message "Enabling line numbers for %s" hook-name)
+;;   (display-line-numbers-mode 1)
+;; )
+;; (add-hook 'prog-mode-hook (lambda () (enable-line-numbers "prog-mode-hook")))
 
-(add-hook 'prog-mode-hook (lambda () (enable-line-numbers "prog-mode-hook")))
+(require 'keybinds)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages '(magit with-editor transient dash)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+(split-window-right)
+
+(dired "~")
+
+(find-file "~/.emacs.d/notes-keybind.txt")
