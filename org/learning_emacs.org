@@ -1,0 +1,63 @@
+* Emacs learning notes
+
+** TODO Setup keybindings [4/5]
+ - [X] Switch to buffer in current window C-X C-b
+ - [X] Switch to buffer in other window C-X C-S-b
+ - [X] Load file in current window C-X C-f
+ - [X] Load file in other window C-x C-S-f
+ - [ ] Reindent block
+
+   
+| Description                        | Command     |
+|------------------------------------+-------------|
+| Switch to buffer in current window | M-x eww     |
+| Opens URL in new buffer            | C-u M-x eww |
+
+
+*** Files
+[[file:~/.emacs.d][Config folder]]
+
+[[file:~/.emacs.d/init.el][init.el]]
+
+*** Useful links
+[[https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html][Emacs manual]]
+
+*** Movement
+| Description           | Command            |
+|-----------------------+--------------------|
+| Beginning/End of file | M-Shift-,/.        |
+
+
+*** Toggling links
+**** Commands
+ 1. font-lock-mode
+
+
+*** Opening URLs
+
+| Description             | Command     |
+|-------------------------+-------------|
+| Opens URL               | M-x eww     |
+| Opens URL in new buffer | C-u M-x eww |
+
+
+*** Headers
+
+| Description    | Command      |
+|----------------+--------------|
+| Toggle headers | M-Left/Right |
+
+   
+*** Toggling List types
+
+| Description       | Command          |
+|-------------------+------------------|
+| Toggle list types | Shift-Left/Right |
+| Move list         | M-S-Left/Right   |
+
+
+
+
+
+
+
