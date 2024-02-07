@@ -22,6 +22,9 @@
 (global-set-key (kbd "C-x C-b") 'buffer-menu)
 (global-set-key (kbd "C-x C-S-b") 'buffer-menu-other-window)
 
+(global-set-key (kbd "C-x C-d") 'dired)
+(global-set-key (kbd "C-x C-S-d") 'dired-other-window)
+
 
 (global-set-key (kbd "C-x C-f") 'find-file)
 (global-set-key (kbd "C-x C-S-f") 'find-file-other-window)

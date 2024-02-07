@@ -1,4 +1,5 @@
-* Emacs learning notes
+lea* Emacs learning notes
+
 
 ** TODO Setup keybindings [4/5]
  - [X] Switch to buffer in current window C-X C-b

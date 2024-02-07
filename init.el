@@ -22,12 +22,14 @@
 ;;   (message "Enabling line numbers for %s" hook-name)
 ;;   (display-line-numbers-mode 1)
 ;; )
-(add-hook 'prog-mode-hook (lambda () (enable-line-numbers "prog-mode-hook")))
+
+(global-display-line-numbers-mode)
 
 (use-package magit
   :ensure t)
 
-(require 'keybinds) ; lisp/keybinds.el 
+(require 'keybinds) ; lisp/keybinds.el
+
 (find-file "~/.emacs.d/org/")
 (split-window-right)
 
